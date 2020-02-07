@@ -30,21 +30,12 @@ function fivetwofive_register_settings() {
 
 	/* Login Page Fields */
 	add_settings_field(
-		'custom_url',
-		esc_html__('Custom URL', 'fivetwofive'),
-		'fivetwofive_callback_field_text',
-		'fivetwofive',
-		'fivetwofive_section_login',
-		[ 'id' => 'custom_url', 'label' => esc_html__('Custom URL for the login logo link', 'fivetwofive') ]
-	);
-	
-	add_settings_field(
 		'custom_title',
 		esc_html__('Custom Title', 'fivetwofive'),
 		'fivetwofive_callback_field_text',
 		'fivetwofive',
 		'fivetwofive_section_login',
-		[ 'id' => 'custom_title', 'label' => esc_html__('Custom title attribute for the logo link', 'fivetwofive') ]
+		[ 'id' => 'custom_title', 'label' => esc_html__('Custom title attribute for the CTA', 'fivetwofive') ]
 	);
 
 	add_settings_field(
@@ -55,9 +46,25 @@ function fivetwofive_register_settings() {
 		'fivetwofive_section_login',
 		[ 'id' => 'custom_message', 'label' => esc_html__('Custom text and/or markup', 'fivetwofive') ]
 	);
-    
+
+	add_settings_field(
+		'custom_button_text',
+		esc_html__('Custom Button Text', 'fivetwofive'),
+		'fivetwofive_callback_field_text',
+		'fivetwofive',
+		'fivetwofive_section_login',
+		[ 'id' => 'custom_button_text', 'label' => esc_html__('Custom button text for the CTA', 'fivetwofive') ]
+	);
+
+	add_settings_field(
+		'custom_url',
+		esc_html__('Custom URL', 'fivetwofive'),
+		'fivetwofive_callback_field_text',
+		'fivetwofive',
+		'fivetwofive_section_login',
+		[ 'id' => 'custom_url', 'label' => esc_html__('Custom URL for the CTA link', 'fivetwofive') ]
+	);
+
 }
 
 add_action( 'admin_init', 'fivetwofive_register_settings' );
-
-

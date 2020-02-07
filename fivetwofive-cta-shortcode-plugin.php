@@ -37,12 +37,10 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/core-functions.php';
 function fivetwofive_options_default() {
 
 	return array(
-		'custom_url'     => 'https://fivetwofive.com',
-		'custom_title'   => esc_html__('Powered by WordPress', 'myplugin'),
-		'custom_message' => '<p class="custom-message">'. esc_html__('My custom message.', 'myplugin') .'</p>',
-		// 'custom_footer'  => esc_html__('Special message for users', 'myplugin'),
-		// 'custom_toolbar' => false,
-		// 'custom_scheme'  => 'default',
+		'custom_title'        => esc_html__('Powered by WordPress', 'fivetwofive'),
+		'custom_message'      => '<p class="custom-message">'. esc_html__('My custom message.', 'fivetwofive') .'</p>',
+		'custom_url'          => 'https://fivetwofive.com',
+		'custom_button_text'  => 'Learn More',
 	);
 
 }
