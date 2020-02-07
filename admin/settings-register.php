@@ -1,4 +1,4 @@
-<?php // fivetwofive - Register Settings
+<?php // FiveTwoFive - Register Settings
 
 
 // disable direct file access
@@ -21,7 +21,7 @@ function fivetwofive_register_settings() {
 
 	/* Login Page Section */
 	add_settings_section( 
-		'fivetwofive_section_login',
+		'fivetwofive_section_cta',
 		esc_html__('Customize FiveTwoFive CTA', 'fivetwofive'),
 		'fivetwofive_callback_section_login',
 		'fivetwofive'
@@ -34,7 +34,7 @@ function fivetwofive_register_settings() {
 		esc_html__('Custom Title', 'fivetwofive'),
 		'fivetwofive_callback_field_text',
 		'fivetwofive',
-		'fivetwofive_section_login',
+		'fivetwofive_section_cta',
 		[ 'id' => 'custom_title', 'label' => esc_html__('Custom title attribute for the CTA', 'fivetwofive') ]
 	);
 
@@ -43,7 +43,7 @@ function fivetwofive_register_settings() {
 		esc_html__('Custom Message', 'fivetwofive'),
 		'fivetwofive_callback_field_textarea',
 		'fivetwofive',
-		'fivetwofive_section_login',
+		'fivetwofive_section_cta',
 		[ 'id' => 'custom_message', 'label' => esc_html__('Custom text and/or markup', 'fivetwofive') ]
 	);
 
@@ -52,7 +52,7 @@ function fivetwofive_register_settings() {
 		esc_html__('Custom Button Text', 'fivetwofive'),
 		'fivetwofive_callback_field_text',
 		'fivetwofive',
-		'fivetwofive_section_login',
+		'fivetwofive_section_cta',
 		[ 'id' => 'custom_button_text', 'label' => esc_html__('Custom button text for the CTA', 'fivetwofive') ]
 	);
 
@@ -61,7 +61,7 @@ function fivetwofive_register_settings() {
 		esc_html__('Custom URL', 'fivetwofive'),
 		'fivetwofive_callback_field_text',
 		'fivetwofive',
-		'fivetwofive_section_login',
+		'fivetwofive_section_cta',
 		[ 'id' => 'custom_url', 'label' => esc_html__('Custom URL for the CTA link', 'fivetwofive') ]
 	);
 

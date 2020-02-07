@@ -1,5 +1,4 @@
-<?php // fivetwofive - Settings Callbacks
-
+<?php // FiveTwoFive - Settings Callbacks
 
 
 // disable direct file access
@@ -10,14 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-
 // callback: login section
 function fivetwofive_callback_section_login() {
 
-	echo '<p>'. esc_html__('These settings enable you to customize the custom CTA.', 'fivetwofive') .'</p>';
+	echo '<p>'. esc_html__('These settings enable you to customize the CTA.', 'fivetwofive') .'</p>';
 
 }
-
 
 
 // callback: text field
@@ -36,7 +33,6 @@ function fivetwofive_callback_field_text( $args ) {
 }
 
 
-
 // radio field options
 function fivetwofive_options_radio() {
 
@@ -48,7 +44,6 @@ function fivetwofive_options_radio() {
 	);
 
 }
-
 
 
 // callback: radio field
@@ -75,7 +70,6 @@ function fivetwofive_callback_field_radio( $args ) {
 }
 
 
-
 // callback: textarea field
 function fivetwofive_callback_field_textarea( $args ) {
 	
@@ -92,70 +86,3 @@ function fivetwofive_callback_field_textarea( $args ) {
 	echo '<label for="fivetwofive_options_'. $id .'">'. $label .'</label>';
 	
 }
-
-
-
-// callback: checkbox field
-function fivetwofive_callback_field_checkbox( $args ) {
-
-	$options = get_option( 'fivetwofive_options', fivetwofive_options_default() );
-
-	$id    = isset( $args['id'] )    ? $args['id']    : '';
-	$label = isset( $args['label'] ) ? $args['label'] : '';
-
-	$checked = isset( $options[$id] ) ? checked( $options[$id], 1, false ) : '';
-
-	echo '<input id="fivetwofive_options_'. $id .'" name="fivetwofive_options['. $id .']" type="checkbox" value="1"'. $checked .'> ';
-	echo '<label for="fivetwofive_options_'. $id .'">'. $label .'</label>';
-
-}
-
-
-
-// select field options
-function fivetwofive_options_select() {
-
-	return array(
-
-		'default'   => esc_html__('Default',   'fivetwofive'),
-		'light'     => esc_html__('Light',     'fivetwofive'),
-		'blue'      => esc_html__('Blue',      'fivetwofive'),
-		'coffee'    => esc_html__('Coffee',    'fivetwofive'),
-		'ectoplasm' => esc_html__('Ectoplasm', 'fivetwofive'),
-		'midnight'  => esc_html__('Midnight',  'fivetwofive'),
-		'ocean'     => esc_html__('Ocean',     'fivetwofive'),
-		'sunrise'   => esc_html__('Sunrise',   'fivetwofive'),
-
-	);
-
-}
-
-
-
-// callback: select field
-function fivetwofive_callback_field_select( $args ) {
-
-	$options = get_option( 'fivetwofive_options', fivetwofive_options_default() );
-
-	$id    = isset( $args['id'] )    ? $args['id']    : '';
-	$label = isset( $args['label'] ) ? $args['label'] : '';
-
-	$selected_option = isset( $options[$id] ) ? sanitize_text_field( $options[$id] ) : '';
-
-	$select_options = fivetwofive_options_select();
-
-	echo '<select id="fivetwofive_options_'. $id .'" name="fivetwofive_options['. $id .']">';
-
-	foreach ( $select_options as $value => $option ) {
-
-		$selected = selected( $selected_option === $value, true, false );
-
-		echo '<option value="'. $value .'"'. $selected .'>'. $option .'</option>';
-
-	}
-
-	echo '</select> <label for="fivetwofive_options_'. $id .'">'. $label .'</label>';
-
-}
-
-

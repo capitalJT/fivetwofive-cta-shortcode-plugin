@@ -1,5 +1,4 @@
-<?php // fivetwofive - Validate Settings
-
+<?php // FiveTwoFive - Validate Settings
 
 
 // disable direct file access
@@ -8,7 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 	
 }
-
 
 
 // callback: validate options
@@ -28,7 +26,6 @@ function fivetwofive_callback_validate_options( $input ) {
 		
 	}
 
-	
 	// custom message
 	if ( isset( $input['custom_message'] ) ) {
 		
@@ -39,5 +36,3 @@ function fivetwofive_callback_validate_options( $input ) {
 	return $input;
 	
 }
-
-
