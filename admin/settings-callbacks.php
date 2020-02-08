@@ -3,9 +3,7 @@
 
 // disable direct file access
 if ( ! defined( 'ABSPATH' ) ) {
-	
 	exit;
-	
 }
 
 
@@ -37,8 +35,8 @@ function fivetwofive_callback_field_text( $args ) {
 function fivetwofive_options_radio() {
 
 	return array(
-		'self'  => esc_html__('Open the anchor in the SAME window: target=self', 'fivetwofive'),
-		'blank' => esc_html__('Open the anchor in a NEW window: target=blank', 'fivetwofive')
+		'self'  => esc_html__('Open the anchor in the SAME tab: target=self', 'fivetwofive'),
+		'blank' => esc_html__('Open the anchor in a NEW tab: target=blank', 'fivetwofive')
 	);
 
 }

@@ -3,9 +3,7 @@
 
 // disable direct file access
 if ( ! defined( 'ABSPATH' ) ) {
-	
 	exit;
-	
 }
 
 
@@ -22,7 +20,7 @@ function fivetwofive_register_settings() {
 	/* Login Page Section */
 	add_settings_section( 
 		'fivetwofive_section_cta',
-		esc_html__('Customize FiveTwoFive CTA', 'fivetwofive'),
+		esc_html__('Customize the CTA', 'fivetwofive'),
 		'fivetwofive_callback_section_login',
 		'fivetwofive'
 	);
@@ -31,7 +29,7 @@ function fivetwofive_register_settings() {
 	/* Login Page Fields */
 	add_settings_field(
 		'custom_title',
-		esc_html__('Custom Title', 'fivetwofive'),
+		esc_html__('CTA Title', 'fivetwofive'),
 		'fivetwofive_callback_field_text',
 		'fivetwofive',
 		'fivetwofive_section_cta',
@@ -40,7 +38,7 @@ function fivetwofive_register_settings() {
 
 	add_settings_field(
 		'custom_message',
-		esc_html__('Custom Message', 'fivetwofive'),
+		esc_html__('CTA Message', 'fivetwofive'),
 		'fivetwofive_callback_field_textarea',
 		'fivetwofive',
 		'fivetwofive_section_cta',
@@ -49,7 +47,7 @@ function fivetwofive_register_settings() {
 
 	add_settings_field(
 		'custom_button_text',
-		esc_html__('Custom Button Text', 'fivetwofive'),
+		esc_html__('CTA Button Text', 'fivetwofive'),
 		'fivetwofive_callback_field_text',
 		'fivetwofive',
 		'fivetwofive_section_cta',
@@ -58,7 +56,7 @@ function fivetwofive_register_settings() {
 
 	add_settings_field(
 		'custom_url',
-		esc_html__('Custom URL', 'fivetwofive'),
+		esc_html__('CTA URL', 'fivetwofive'),
 		'fivetwofive_callback_field_text',
 		'fivetwofive',
 		'fivetwofive_section_cta',
@@ -67,7 +65,7 @@ function fivetwofive_register_settings() {
 
 	add_settings_field(
 		'custom_target',
-		esc_html__('Custom Target', 'fivetwofive'),
+		esc_html__('CTA Target', 'fivetwofive'),
 		'fivetwofive_callback_field_radio',
 		'fivetwofive',
 		'fivetwofive_section_cta',

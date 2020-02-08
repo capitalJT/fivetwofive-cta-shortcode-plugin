@@ -1,11 +1,8 @@
 <?php // fivetwofive - Core Functionality
 
-
 // disable direct file access
 if ( ! defined( 'ABSPATH' ) ) {
-	
 	exit;
-	
 }
 
 
@@ -95,5 +92,3 @@ function fivetwofive_register_cta_shortcodes() {
 }
 
 add_action( 'init', 'fivetwofive_register_cta_shortcodes');
-
-
