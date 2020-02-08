@@ -65,6 +65,15 @@ function fivetwofive_register_settings() {
 		[ 'id' => 'custom_url', 'label' => esc_html__('Custom URL for the CTA link', 'fivetwofive') ]
 	);
 
+	add_settings_field(
+		'custom_target',
+		esc_html__('Custom Target', 'fivetwofive'),
+		'fivetwofive_callback_field_radio',
+		'fivetwofive',
+		'fivetwofive_section_cta',
+		[ 'id' => 'custom_target', 'label' => esc_html__('Custom target for the CTA', 'fivetwofive') ]
+	);
+
 }
 
 add_action( 'admin_init', 'fivetwofive_register_settings' );

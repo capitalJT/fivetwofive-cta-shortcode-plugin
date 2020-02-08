@@ -23,6 +23,7 @@ function fivetwofive_cta_download(){
 //	$fivetwofive_cta_default_message = $fivetwofive_default_options_array['custom_message'];
 //	$fivetwofive_cta_default_button_text = $fivetwofive_default_options_array['custom_button_text'];
 //	$fivetwofive_cta_default_url = $fivetwofive_default_options_array['custom_url'];
+//	$fivetwofive_cta_default_target = $fivetwofive_default_options_array['custom_target'];
 
 	$cta_download_html = "<div class='cta cta-download'>";
 		$cta_download_html .= "<div class='cta-download-inner'>";
@@ -58,7 +59,19 @@ function fivetwofive_cta_download(){
 					$cta_button_text = sanitize_text_field( $fivetwofive_default_options_array['custom_button_text'] );
 				}
 
-				$cta_download_html .= "<a class='button cta-button-1 has-shadow' href=". $cta_link. ">". $cta_button_text ."</a>";
+				if ( isset( $options['custom_target'] ) && ! empty( $options['custom_target'] ) ) {
+					$target = sanitize_text_field( $options['custom_target'] );
+				} else {
+					$target = sanitize_text_field( $fivetwofive_default_options_array['custom_target'] );
+				}
+
+				if ( 'blank' === $target ) {
+					$cta_target = "_blank";
+				} else {
+					$cta_target = "_self";
+				}
+
+				$cta_download_html .= "<a class='button cta-button-1 has-shadow' href='". $cta_link ."' target='". $cta_target ."'>". $cta_button_text ."</a>";
 
 			$cta_download_html .= "</div>";
 		$cta_download_html .= "</div>";

@@ -41,6 +41,7 @@ function fivetwofive_options_default() {
 		'custom_message'      => '<p class="custom-message">'. esc_html__('My custom message.', 'fivetwofive') .'</p>',
 		'custom_url'          => 'https://fivetwofive.com',
 		'custom_button_text'  => 'Learn More',
+		'custom_target'       => 'self',
 	);
 
 }

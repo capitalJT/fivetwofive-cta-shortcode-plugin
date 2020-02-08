@@ -37,10 +37,8 @@ function fivetwofive_callback_field_text( $args ) {
 function fivetwofive_options_radio() {
 
 	return array(
-
-		'enable'  => esc_html__('Enable custom styles', 'fivetwofive'),
-		'disable' => esc_html__('Disable custom styles', 'fivetwofive')
-
+		'self'  => esc_html__('Open the anchor in the SAME window: target=self', 'fivetwofive'),
+		'blank' => esc_html__('Open the anchor in a NEW window: target=blank', 'fivetwofive')
 	);
 
 }
