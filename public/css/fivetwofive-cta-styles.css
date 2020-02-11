@@ -1,271 +1,65 @@
-/*
-$color-primary: #114ae6;
-$color-secondary: #02d3e6;
-$color-light-gray: #eff3f5;
- */
-
-.cta{
+.cta.cta-download{
     padding: 30px 20px 40px;
     display: block;
     margin-bottom: 20px;
-    border-radius: 3px;
-    background-color: #eee;
-}
-.cta-title{
-    font-size: 26px;
-    line-height: 1em;
-    margin: 0;
-}
-.text-white{
-    color: #ffffff;
-}
-
-.text-center{
+    border-radius: 5px;
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #000000;
     text-align: center;
 }
-.has-shadow{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-}
 
-.cta.cta-download .button{
-    min-width: 150px;
-}
-.button{
-    color: #fff;
-    border-radius: 3px;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 16px;
-    letter-spacing: -0.25px;
-    padding: 10px 24px 14px;
-    transition: all 200ms ease-in-out;
-}
-a.button{
-    text-decoration: none;
-}
-
-.cta-button-1{
-    background-color: #114ae6;
-}
-.cta-button-1:hover{
-    background-color: #02d3e6;
-    color: white;
-}
-
-.cta-button-2{
-    background-color: #02d3e6;
-    transition: background-color 0.3s ease-in-out;
-}
-.cta-button-2:hover{
-    color: #ffffff;
-    background-color: #00bbcc;
-
-}
-
-.cta-button-3{
-    background-size: 200% auto;
-    color: #ffffff;
-    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-    background-image: linear-gradient(to right, #114ae6 0%, #5ad4d8 50%, #02d3e6 100%);
-    transition: 0.5s;
-}
-.cta-button-3:hover {
-    background-position: right center;
-    color: #ffffff;
-}
-
-.cta-download{
-    background: linear-gradient(75deg, #114ae6 0%, #02d3e6 100%);
-    color: #ffffff;
-    position: relative;
-    text-align: center;
-}
-.cta-download .cta-title{
-    margin-bottom: 15px;
-}
-.cta-download .cta-subtitle{
-    margin-bottom: 10px;
-}
-.cta-download:before,
-.cta-download:after{
-    display: table;
-    content: "";
-    background-image: url(/wp-content/themes/bridge-child/rs_assets/img/common/cta-footer-highlight.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 110%;
-    height: 23px;
-    position: absolute;
-}
-.cta-download:before{
-    top: 0;
-    left: 0;
-    background-position: center top;
-}
-.cta-download:after{
-    bottom: 0;
-    left: 0;
-    background-position: center bottom;
-}
-.cta-download-inner{
+.cta.cta-download .cta-download-inner{
     max-width: 880px;
     margin: 0 auto;
 }
 
-.cta-contact{
-    background-color: #114ae6;
-    color: #ffffff;
-    background-image: url(/wp-content/plugins/fivetwofive-cta-shortcode-plugin/public/images/cta-footer-highlight.png;), url(/wp-content/plugins/fivetwofive-cta-shortcode-plugin/public/images/cta-footer-highlight.png;);
-    background-position: bottom, top;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 110%;
+.cta.cta-download .cta-title{
+    font-size: 26px;
+    line-height: 1em;
+    margin: 0 0 15px 0;
 }
 
-.cta-contact-form{
-    background-color: #114ae6;
-    padding: 40px;
-    background-position: bottom, top;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 110%;
-    position: relative;
-}
-.cta-contact-form:before,
-.cta-contact-form:after{
-    display: table;
-    content: "";
-    background-image: url(/wp-content/plugins/fivetwofive-cta-shortcode-plugin/public/images/cta-footer-highlight.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 110%;
-    height: 23px;
-    position: absolute;
-}
-.cta-contact-form:before{
-    top: 0;
-    left: 0;
-    background-position: center top;
-}
-.cta-contact-form:after{
-    bottom: 0;
-    left: 0;
-    background-position: center bottom;
-}
-#cta-contact-form-content-wrapper{
-    max-width: 650px;
-    margin: 0 auto;
-}
-#cta-contact-form-content-wrapper ._form_5 form{
-    margin-top: 0 !important;
-    text-align: center !important;
-}
-#cta-contact-form-content-wrapper ._form-title,
-#cta-contact-form-content-wrapper ._form-label{
-    font-family: 'Nevo',sans-serif;
+.cta.cta-download .cta-btn{
+    min-width: 150px;
     color: #ffffff;
-}
-#cta-contact-form-content-wrapper form ._form-title{
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-#cta-contact-form-content-wrapper ._form-content p,
-#cta-contact-form-content-wrapper ._form-thank-you{
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #ffffff;
-    font-size: 20px;
-}
-#cta-contact-form-content-wrapper ._form-content input[type=text]{
-    background-color: #ffffff;
-    border: none;
-    color: #7a8288;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
-    padding: 8px 12px;
-    margin: 0 auto;
-    max-width: 350px;
-}
-#cta-contact-form-content-wrapper ._button-wrapper button._submit {
-    color: #fff;
-    border-radius: 3px;
+    border-radius: 5px;
     display: inline-block;
     font-size: 16px;
-    font-weight: 600;
     line-height: 16px;
-    letter-spacing: -0.25px;
-    padding: 10px 24px 14px !important;
-    transition: all 200ms ease-in-out;
-    background-color: #02d3e6 !important;
-    border: 0 !important;
-    border-image-width: 0 !important;
-    outline: none;
-    margin: 0 !important;
-}
-#cta-contact-form-content-wrapper ._button-wrapper button._submit:hover{
-    background-color: #01bdce !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    font-weight: bold;
+    padding: 10px 24px 14px;
+    transition: all 300ms ease-in-out;
+    text-decoration: none;
+    background-color: #000000;
 }
 
-.animated-button{
-    animation-name: bounce;
-    animation-duration: 700ms; /* or: Xms */
-    animation-iteration-count: 6;
-    animation-direction: alternate; /* or: normal */
-    animation-timing-function:ease-in-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
-    animation-fill-mode: forwards; /* or: backwards, both, none */
-    animation-delay: 5s; /* or: Xms */
+.cta.cta-download .cta-btn:hover{
+    background-color: #f37335;
+    color: #000000;
 }
 
-@-webkit-keyframes bounce {
-    to { -webkit-transform: scale(1.2); }
-}
-@-moz-keyframes bounce {
-    to { -moz-transform: scale(1.2); }
-}
-@keyframes bounce {
-    to { transform: scale(1.2); }
+.cta.cta-download .has-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media screen and (max-width: 639px) {
-    .cta-button-1{
-        border: solid thin #02d3e6;
-    }
-}
 @media screen and (min-width: 639px) {
-    .cta{
-        padding: 60px 40px;
+    .cta.cta-download{
+        padding: 60px 40px 50px;
     }
-    .cta-download-inner{
+
+    .cta.cta-download .cta-download-inner{
         display: flex;
         align-items: center;
+    }
+
+    .cta.cta-download .cta-title,
+    .cta.cta-download .cta-content{
         text-align: left;
     }
-    .cta-download .cta-column-2{
+
+    .cta.cta-download .cta-column-2{
         padding: 0 0 0 40px;
-    }
-}
-@media screen and (min-width: 768px) {
-    #cta-contact-form-content-wrapper ._form_element._full_width:not(._clear){
-        float: left;
-        max-width: 425px !important;
-    }
-
-    #cta-contact-form-content-wrapper ._form_element._x62957983 ._form-label{
-        display: none;
-    }
-
-    #cta-contact-form-content-wrapper ._form-content input[type=text]{
-        margin: 0 0 0 auto;
-    }
-
-    #cta-contact-form-content-wrapper ._button-wrapper{
-        float: left;
-        width: 95px !important;
-    }
-}
-@media screen and (min-width: 1280px) {
-    .cta-contact-form:before,
-    .cta-contact-form:after{
-        height: 35px;
     }
 }

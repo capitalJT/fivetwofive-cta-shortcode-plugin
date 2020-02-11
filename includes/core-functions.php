@@ -5,9 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
 /*
- * Download CTA
+ * Custom CTA
  * shortcode: [cta-download]
  */
 function fivetwofive_cta_download(){
@@ -16,33 +15,36 @@ function fivetwofive_cta_download(){
 
 	$fivetwofive_default_options_array = fivetwofive_options_default();
 
-//	$fivetwofive_cta_default_title = $fivetwofive_default_options_array['custom_title'];
-//	$fivetwofive_cta_default_message = $fivetwofive_default_options_array['custom_message'];
-//	$fivetwofive_cta_default_button_text = $fivetwofive_default_options_array['custom_button_text'];
-//	$fivetwofive_cta_default_url = $fivetwofive_default_options_array['custom_url'];
-//	$fivetwofive_cta_default_target = $fivetwofive_default_options_array['custom_target'];
+	/*
+	 * $fivetwofive_cta_default_title = $fivetwofive_default_options_array['custom_title'];
+	 * $fivetwofive_cta_default_message = $fivetwofive_default_options_array['custom_message'];
+	 * $fivetwofive_cta_default_button_text = $fivetwofive_default_options_array['custom_button_text'];
+	 * $fivetwofive_cta_default_url = $fivetwofive_default_options_array['custom_url'];
+	 * $fivetwofive_cta_default_target = $fivetwofive_default_options_array['custom_target'];
+	 */
 
-	$cta_download_html = "<div class='cta cta-download'>";
-		$cta_download_html .= "<div class='cta-download-inner'>";
-			$cta_download_html .= "<div class='cta-column-1'>";
+	$custom_cta_html = "<div class='cta cta-download'>";
+		$custom_cta_html .= "<div class='cta-download-inner'>";
+			$custom_cta_html .= "<div class='cta-column-1'>";
 
 				if ( isset( $options['custom_title'] ) && ! empty( $options['custom_title'] ) ) {
-					$cta_download_html .= "<h3 class='cta-title text-white'>". $options['custom_title'] ."</h3>";
+					$custom_cta_html .= "<h3 class='cta-title'>". $options['custom_title'] ."</h3>";
 				} else {
-					$cta_download_html .= "<h3 class='cta-title text-white'>". $fivetwofive_default_options_array['custom_title'] ."</h3>";
+					$custom_cta_html .= "<h3 class='cta-title'>". $fivetwofive_default_options_array['custom_title'] ."</h3>";
 				}
 
-				if ( isset( $options['custom_message'] ) && ! empty( $options['custom_message'] ) ) {
-					$cta_message = wp_kses_post( $options['custom_message'] );
-				} else {
-					$cta_message = wp_kses_post( $fivetwofive_default_options_array['custom_message'] );
-				}
+				$custom_cta_html .= "<div class='cta-content'>";
+					if ( isset( $options['custom_message'] ) && ! empty( $options['custom_message'] ) ) {
+						$cta_message =  wp_kses_post( $options['custom_message'] );
+					} else {
+						$cta_message = wp_kses_post( $fivetwofive_default_options_array['custom_message'] );
+					}
+					$custom_cta_html .= $cta_message;
+				$custom_cta_html .= "</div><!-- end .cta-content -->";
 
-				$cta_download_html .= $cta_message;
+			$custom_cta_html .= "</div><!-- end .cta-column-1 -->";
 
-			$cta_download_html .= "</div>";
-
-			$cta_download_html .= "<div class='cta-column-2'>";
+			$custom_cta_html .= "<div class='cta-column-2'>";
 
 				if ( isset( $options['custom_url'] ) && ! empty( $options['custom_url'] ) ) {
 					$cta_link = esc_url( $options['custom_url'] );
@@ -68,13 +70,13 @@ function fivetwofive_cta_download(){
 					$cta_target = "_self";
 				}
 
-				$cta_download_html .= "<a class='button cta-button-1 has-shadow' href='". $cta_link ."' target='". $cta_target ."'>". $cta_button_text ."</a>";
+				$custom_cta_html .= "<a class='cta-btn has-shadow' href='". $cta_link ."' target='". $cta_target ."'>". $cta_button_text ."</a>";
 
-			$cta_download_html .= "</div>";
-		$cta_download_html .= "</div>";
-	$cta_download_html .= "</div>";
+			$custom_cta_html .= "</div><!-- end .cta-column-2 -->";
+		$custom_cta_html .= "</div><!-- end .cta-download-inner -->";
+	$custom_cta_html .= "</div><!-- end .cta-download -->";
 
-	return $cta_download_html;
+	return $custom_cta_html;
 }
 
 
